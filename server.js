@@ -6,7 +6,7 @@ const {router,Socket}=require('./Routes')
 const io = require('socket.io')(http,{
   pingTimeout:60000,
   cors: {
-    origin:[ "http://localhost:3000", "http://localhost:3001"],
+    origin:[ "http://localhost:3000", "http://localhost:3001","https://africab-frontend.vercel.app"],
     credentials: true
   }
 });
