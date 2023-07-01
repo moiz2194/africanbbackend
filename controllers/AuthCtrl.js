@@ -293,7 +293,7 @@ authrouter.get('/verify-email/:token', async (req, res) => {
     await user.save();
 
     // Respond with success message
-    res.status(200).redirect(`${process.env.FRONTEND}/signin`);
+    res.status(200).redirect(`${process.env.FRONTEND}/buyer/signin`);
   } catch (error) {
     // Handle errors
     console.error(error);
