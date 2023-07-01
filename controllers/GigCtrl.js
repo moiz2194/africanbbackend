@@ -235,6 +235,7 @@ router.get('/gigs', asyncerror(async (req, res) => {
     const searchKeyword = req.query.search;
     const regexPattern = new RegExp(searchKeyword, 'i');
     const gigs = await Gig.find({
+         status: "active",
         $or: [
             { title: { $regex: regexPattern } },
             { positiveTags: { $in: [regexPattern] } }
