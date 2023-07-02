@@ -16,8 +16,7 @@ const thisSchema = new Schema({
         required: true
     },
     website:{
-        type: String,
-        required: true
+        type: String
     },
     return:{
         type: Number,
